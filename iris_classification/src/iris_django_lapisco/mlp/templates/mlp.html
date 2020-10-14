@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> MLP</h1>
+    <ul>
+        {%for i in result%}
+            <a id = "teste" href="{% url 'atualizar_consulta' i.id %}">
+                <li>{{i.valores}}, {{i.classe}}</li>
+            </a>
+        
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'adicionar_amostra' %}">Adicionar amostra</a>
+
+    {% if y_hat %}
+        {{y_hat}}
+    {% endif %}
+    {{resultados}}
+</body>
+</html>

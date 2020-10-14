@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+    api:
+        container_name: lapisco_api_iris_django_2
+        command: "python manage.py runserver 0.0.0.0:$PORT"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - 8000:$PORT
+        env_file: .env
+        
+        restart: always
