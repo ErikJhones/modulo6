@@ -1,6 +1,12 @@
 # module_6_lapisco
 Praticis with django and fastapi for server the MLP classifier
 
+# Response question 1:
+Qual o motivo para realizar o carregamento do modelo fora dos endpoint na
+aplicação flask? 
+
+-- O motivo, provavelmente, é por segurança contra falhas de rotas eu acho. Se um endpoint (rota), por algum motivo ficar fora do ar, o modelo ainda pode ser usado por outras rotas sem problemas. Além de economizar recursos.
+
 # DETAILS FOR IRIS WITH DJANGO 
 ##### First: Open a terminal and acess the manage.py directory witch cd iris_classification/scr/iris_django_lapisco.
 
